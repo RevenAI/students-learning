@@ -1,0 +1,135 @@
+/* Todos list styles */
+.todos-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .todos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .todos-header h2 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .todos-filter {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-button {
+    padding: 6px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #555;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .filter-button.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+  }
+  
+  .todos-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .todo-item {
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .todo-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .todo-card {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .todo-card.completed .todo-title {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .todo-checkbox {
+    position: relative;
+  }
+  
+  .todo-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .todo-checkbox label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .todo-checkbox input:checked + label {
+    background-color: #3498db;
+    border-color: #3498db;
+  }
+  
+  .todo-checkbox input:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .todo-content {
+    flex: 1;
+  }
+  
+  .todo-title {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+  }
+  
+  .todo-user {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  @media (max-width: 576px) {
+    .todos-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

@@ -1,0 +1,73 @@
+/* Users list styles */
+.users-container h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .users-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .user-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .user-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .user-header h3 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .user-details {
+    padding: 15px;
+  }
+  
+  .user-details p {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .users-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
