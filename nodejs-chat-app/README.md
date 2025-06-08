@@ -191,7 +191,7 @@ graph TD
 
 1. **Clone Repository**:
    ```bash
-   git clone https://github.com/RavenAI/nodejs-chat-app.git
+   git clone https://github.com/RevenAI/students-learning/tree/main/nodejs-chat-app
    cd nodejs-chat-app
    ```
 
