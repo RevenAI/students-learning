@@ -1,27 +1,27 @@
 const express = require('express');
 const app = express();
 
-// Middleware
-app.use(express.json());
+//Middleware 
+app.use(express.json()); 
 
-// In-memory data store
+//In-memory data store
 let items = [
     { id: 1, name: 'Item 1', description: 'This is item 1' },
     { id: 2, name: 'Item 2', description: 'This is item 2' },
     { id: 3, name: 'Item 3', description: 'This is item 3' }
 ];
 
-// Root route
+//Root route
 app.get('/', (req, res) => {
     res.send('Hello, World');
 });
 
-// GET all items
+//GET all items
 app.get('/items', (req, res) => {
     res.json(items);
 });
 
-// GET single item by ID
+//GET single item by ID
 app.get('/items/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const item = items.find(item => item.id === id);
@@ -33,7 +33,7 @@ app.get('/items/:id', (req, res) => {
     res.json(item);
 });
 
-// POST create new item
+//POST create new item
 app.post('/items', (req, res) => {
     if (!req.body.name || !req.body.description) {
         return res.status(400).json({ error: 'Name and description are required' });
@@ -49,7 +49,7 @@ app.post('/items', (req, res) => {
     res.status(201).json(newItem);
 });
 
-// PUT update item by ID
+//PUT update item by ID
 app.put('/items/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const itemIndex = items.findIndex(item => item.id === id);
